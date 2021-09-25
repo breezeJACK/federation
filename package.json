@@ -4,8 +4,7 @@
   "workspaces": {
     "packages": [
       "app1",
-      "app2",
-      "app3"
+      "app2"
     ]
   },
   "scripts": {
@@ -14,5 +13,6 @@
   },
   "devDependencies": {
     "lerna": "^4.0.0"
-  }
+  },
+  "dependencies": {}
 }
