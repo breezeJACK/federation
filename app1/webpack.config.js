@@ -5,10 +5,10 @@ const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
     devtool: false,
-    entry: './src/main.js',
+    entry: './src/index.js',
     mode: "development",
     devServer: {
-      port: 3000,
+      port: 3001,
       contentBase: path.join(__dirname, "dist"),
     },
     module: {
@@ -39,6 +39,11 @@ module.exports = {
             // 需要暴露的模块，使用时通过 `${name}/${expose}` 引入
             exposes: {
                 './Header': "./src/components/Header.vue",
+            },
+            shared:{
+              vue: {
+                singleton: true,
+              },
             }
           })
       ]

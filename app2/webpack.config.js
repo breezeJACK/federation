@@ -5,10 +5,10 @@ const { ModuleFederationPlugin } = require("webpack").container;
 
 module.exports = {
     devtool: false,
-    entry: './src/main.js',
+    entry: './src/index.js',
     mode: "development",
     devServer: {
-      port: 3001,
+      port: 3002,
       contentBase: path.join(__dirname, "dist"),
     },
     module: {
@@ -34,6 +34,11 @@ module.exports = {
           name: "app2",
           remotes: {
             app1: "app1@http://localhost:3000/remoteEntry.js",
+          },
+          shared:{
+            vue: {
+              singleton: true,
+            },
           }
         })
       ]
