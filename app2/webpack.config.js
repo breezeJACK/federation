@@ -8,7 +8,7 @@ module.exports = {
     entry: './src/index.js',
     mode: "development",
     devServer: {
-      port: 3002,
+      port: 3001,
       contentBase: path.join(__dirname, "dist"),
     },
     module: {
